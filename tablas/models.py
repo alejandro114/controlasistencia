@@ -14,7 +14,7 @@ class Controlasistencia(models.Model):
     horas=models.CharField(max_length=30)
     nombres=models.ForeignKey(Trabajadores)
 class TareasEncargadas(models.Model):
-    cod=models.ForeignKey(proyectos)
+    cod=models.ForeignKey(Proyectos)
     nro_encargados=models.CharField(max_length=02)#falta poner codigo de nuero
     nombres	= models.ForeignKey(Trabajadores)
     fecha_inicio = models.DateField()

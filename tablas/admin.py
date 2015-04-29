@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import trabajadores
+from .models import Trabajadores
 # Register your models here.
-admin.site.register (trabajadores)
+admin.site.register (Trabajadores)
