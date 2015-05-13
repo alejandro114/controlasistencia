@@ -11,18 +11,20 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='controlasistencia',
+            name='ControlAsistencia',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('reporte', models.CharField(max_length=30)),
                 ('dias', models.CharField(max_length=30)),
                 ('horas', models.CharField(max_length=30)),
             ],
         ),
         migrations.CreateModel(
-            name='proyectos',
+            name='Proyectos',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('cod', models.CharField(max_length=30)),
+                ('nombreproyecto', models.CharField(max_length=30)),
                 ('detalles_proyecto', models.CharField(max_length=100)),
             ],
         ),
@@ -33,11 +35,11 @@ class Migration(migrations.Migration):
                 ('nro_encargados', models.CharField(max_length=2)),
                 ('fecha_inicio', models.DateField()),
                 ('fecha_fin', models.DateField()),
-                ('cod', models.ForeignKey(to='tablas.proyectos')),
+                ('nombreproyecto', models.ForeignKey(to='tablas.Proyectos')),
             ],
         ),
         migrations.CreateModel(
-            name='trabajadores',
+            name='Trabajadores',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('nombres', models.CharField(max_length=30)),
@@ -49,11 +51,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='tareasencargadas',
             name='nombres',
-            field=models.ForeignKey(to='tablas.trabajadores'),
+            field=models.ForeignKey(to='tablas.Trabajadores'),
         ),
         migrations.AddField(
             model_name='controlasistencia',
             name='nombres',
-            field=models.ForeignKey(to='tablas.trabajadores'),
+            field=models.ForeignKey(to='tablas.Trabajadores'),
         ),
     ]

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h2>Proyectos</h2>
+<table>
+<tr>
+<FONT FACE="Arial" SIZE="5" COLOR="#HHHH"><p>Detalles de las tablas.</p></FONT>
+    <td><b><u>Cod</u></b></td>
+    <td><b><u>nombreproyecto</u></b></td>
+    <td><b><u>Detalles Proyecto</u></b></td>
+</tr>
+{% for proyectos in bbbb %}
+<tr>
+    <td>{{proyectos.cod}}</td>
+    <td>{{proyectos.nombreproyecto}}</td>
+    <td>{{proyectos.detalles_proyecto}}</td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>

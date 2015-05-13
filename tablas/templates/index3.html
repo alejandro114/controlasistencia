@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2><P align="center">Control Asistencia</P></h2>
+<table>
+<tr>
+	<FONT FACE="Arial" SIZE="5" COLOR="#HHHH"><p>Detalles de las tablas.</p></FONT>
+	<td><b><u>Repote</u></b></td>
+	<td><b><u>Dias</u></b></td>
+	<td><b><u>Horas</u></b></td>
+	<td><b><u>Nombres</u></b></td>
+</tr>
+{% for controlasistencia in cccc %}
+<tr>
+	<td>{{controlasistencia.reporte}}</td>
+	<td>{{controlasistencia.dias}}</td>
+	<td>{{controlasistencia.horas}}</td>
+	<td>{{controlasistencia.nombres}}</td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2>Trabajarores</h2>
+<table>
+<tr>
+	<td>Nombre</td>
+	<td>Apellido</td>
+	<td>telefono</td>
+	<td>correo</td>
+</tr>
+{% for trabajador in aaaa %}
+<tr>
+	<td>{{trabajador.nombres}}</td>
+	<td>{{trabajador.apellido}}</td>
+	<td>{{trabajador.telefono}}</td>
+	<td>{{trabajador.correo}}</td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>

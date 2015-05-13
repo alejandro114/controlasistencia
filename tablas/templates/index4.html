@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>tareasencargadas</h2>
+<table>
+<tr>
+	<td>nombreproyecto</td>
+	<td>nro_encargados</td>
+	<td>nombres</td>
+	<td>fecha_incio</td>
+	<td>fecha_fin</td>
+</tr>
+{% for tareasencargadas in dddd %}
+<tr>
+	<td>{{tareasencargadas.nombreproyecto}}</td>
+	<td>{{tareasencargadas.nro_encargados}}</td>
+	<td>{{tareasencargadas.nombres}}</td>
+	<td>{{fecha_inicio}}</td>
+	<td>fecha_fin</td>
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>
